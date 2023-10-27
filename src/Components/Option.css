@@ -1,0 +1,44 @@
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .options .form-check {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .options .form-check:hover {
+    background-color: darkergreen;
+  }
+  
+  .options .form-check.selected {
+    background-color: red;
+  }
+  
+  .options .form-check-input {
+    display: block;
+    margin: 0 10px;
+  }
+  
+  .options .form-check-label {
+    font-size: 50px;
+  }
+  
+  button.done {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  button.done:hover {
+    background-color: darkergreen;
+  }
+  
