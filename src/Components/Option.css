@@ -1,3 +1,4 @@
+/* Default styles for all screen sizes */
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -12,9 +13,9 @@
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #333; /* Add a border for the button */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for color and transform */
+  border: 1px solid #333;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
 
   display: flex;
   flex-direction: column;
@@ -25,13 +26,12 @@
 }
 
 .form-check:hover {
-  background-color: rgb(43, 141, 43); /* Darker green on hover */
-  transform: translateY(-3px); /* Lift the button on hover for a pressed effect */
+  background-color: rgb(43, 141, 43);
+  transform: translateY(-3px);
 }
 
 .form-check.selected {
   background-color: red;
-  /* Add specific styles for the selected button, if needed */
 }
 
 .form-check-input {
@@ -41,7 +41,6 @@
 
 .form-check-label {
   font-size: 20px;
-  /* Increase font size for better readability */
 }
 
 button.done {
@@ -55,3 +54,9 @@ button.done:hover {
   background-color: darkergreen;
 }
 
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .options {
+    grid-template-columns: 1fr; /* Display options in a single column */
+  }
+}
