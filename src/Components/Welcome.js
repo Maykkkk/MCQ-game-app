@@ -2,8 +2,6 @@
 import React from 'react';
 import './Welcome.css';
 
-function Welcome() {
-
 function Welcome({ user }) {
   return (
     <div className='welcome-container'>
@@ -11,6 +9,5 @@ function Welcome({ user }) {
       <p className="greeting-message">Let's test your knowledge!</p>
     </div>
   );
-}
 }
 export default Welcome;
