@@ -1,0 +1,78 @@
+/* login.css */
+
+/* Container for the login form */
+.login-container {
+    text-align: center;
+    background-color: #362e57;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 50px auto 0; /* Add 50px margin to the top */
+}
+
+
+/* Heading */
+.login-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff; /* Change heading color */
+}
+
+/* Text input field */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #007bff; /* Change border thickness and color */
+    border-radius: 5px;
+    font-size: 16px; /* Adjust font size */
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #0056b3; /* Change color when focused */
+}
+
+/* Login button */
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Slightly larger padding */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px; /* Increase font size */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Change color on hover */
+    animation: pulse 0.5s infinite; /* Add a subtle pulse animation */
+}
+
+/* Add a subtle pulse animation to the login button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Create a little space at the bottom */
+.login-container {
+    margin-bottom: 20px;
+}
+
+/* Styling for the "Hello" message */
+.login-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}

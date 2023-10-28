@@ -1,44 +1,57 @@
 .options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .form-check {
-    cursor: pointer;
-    background-color: green;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .form-check:hover {
-    background-color: darkergreen;
-  }
-  
-  .form-check.selected {
-    background-color: red;
-  }
-  
-  .form-check-input {
-    display: block;
-    margin: 0 10px;
-  }
-  
-  .form-check-label {
-    font-size: 50px;
-  }
-  
-  button.done {
-    background-color: green;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  
-  button.done:hover {
-    background-color: darkergreen;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.form-check {
+  cursor: pointer;
+  background-color: rgb(53, 161, 53);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333; /* Add a border for the button */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for color and transform */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-check:hover {
+  background-color: rgb(43, 141, 43); /* Darker green on hover */
+  transform: translateY(-3px); /* Lift the button on hover for a pressed effect */
+}
+
+.form-check.selected {
+  background-color: red;
+  /* Add specific styles for the selected button, if needed */
+}
+
+.form-check-input {
+  display: block;
+  margin: 0 10px;
+}
+
+.form-check-label {
+  font-size: 20px;
+  /* Increase font size for better readability */
+}
+
+button.done {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button.done:hover {
+  background-color: darkergreen;
+}
+

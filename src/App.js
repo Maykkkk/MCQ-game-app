@@ -37,23 +37,27 @@ function App() {
               ],
               answer: questionData.correct_answer,
             }));
-            setState({ ...state, questionBank, loading: false });
+            setState((prevState) => ({ ...prevState, questionBank, loading: false }));
           } else {
             console.error("No questions found in API response");
-            setState({ ...state, loading: false });
+            setState((prevState) => ({ ...prevState, loading: false }));
           }
         } else {
           console.error("Failed to fetch questions");
-          setState({ ...state, loading: false });
+          setState((prevState) => ({ ...prevState, loading: false }));
         }
       } catch (error) {
         console.error("Error fetching questions:", error);
-        setState({ ...state, loading: false });
+        setState((prevState) => ({ ...prevState, loading: false }));
       }
     }
-
-    fetchData();
-  }, [state]); // Empty dependency array to fetch data only once
+  
+    if (!state.questionBank.length) {
+      // Fetch data only when questionBank is empty
+      fetchData();
+    }
+  }, [state]);
+  
 
   const handleOptionChange = (e) => {
     setState({ ...state, selectedOption: e.target.value });
@@ -93,10 +97,11 @@ function App() {
 
   return (
     <div className="App d-flex flex-column align-items-center justify-content-center">
-      <h1 className="app-title">QUIZ APP</h1>
+      <h1 className="app-title">MCQ Game</h1>
       {user ? (
         // If the user is authenticated, show the Welcome component
-        <Welcome />
+        <Welcome user={user} />
+
       ) : (
         // If the user is not authenticated, show the Login component
         <Login />
@@ -104,7 +109,7 @@ function App() {
   
       {user && !state.quizStarted ? (
         // If the user is authenticated but the quiz hasn't started, show the "Start Quiz" button
-        <button onClick={startQuiz}>Start Quiz</button>
+        <button onClick={startQuiz} className="start-quiz-button pulse">Start Quiz</button>
       ) : null}
   
       {user && state.quizStarted ? (
@@ -121,6 +126,7 @@ function App() {
           ) : (
             // After the quiz ends, show the Score component
             <Score
+              userName={user}
               score={state.score}
               onNextQuestion={handleNextQuestion}
               className="score"

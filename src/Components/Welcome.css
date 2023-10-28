@@ -1,0 +1,49 @@
+/* welcome.css */
+
+/* Container for the welcome message */
+.welcome-container {
+    text-align: center;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Welcome message */
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff; /* Change heading color */
+}
+
+/* Greeting message */
+.greeting-message {
+    font-size: 18px;
+    color: #333; /* Change text color */
+}
+
+/* Add a subtle pulse animation to the welcome message */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply the pulse animation to the welcome message */
+.welcome-message.pulse {
+    animation: pulse 0.5s infinite;
+}
+
+/* Create a little space at the bottom */
+.welcome-container {
+    margin-bottom: 20px;
+}

@@ -6,7 +6,40 @@ body {
   }
   
   .app-title {
-  color: #008000;
+  color: #9dd25e;
   margin-top: 2rem;
   }
   
+  /* button.css */
+
+/* Start Quiz button */
+.start-quiz-button {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-quiz-button:hover {
+  background-color: #0056b3; /* Change color on hover */
+}
+
+/* Add a subtle pulse animation to the button */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.start-quiz-button.pulse {
+  animation: pulse 2s infinite;
+}

@@ -1,40 +1,74 @@
+.question-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.question-number {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 .question {
-    margin-bottom: 20px;
-  }
-  
-  .question h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .question h5 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .question form {
-    margin-bottom: 10px;
-  }
-  
-  .question .btn-primary {
-    background-color: #008000;
-    border-color: #008000;
-    color: white;
-  }
-  
-  .question .btn-primary:hover {
-    background-color: #339933;
-    border-color: #339933;
-  }
-  
-  .question-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #002980;
-    color: white;
-    font-size: 20px;
-  }
-  
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.form-check {
+  cursor: pointer;
+  background-color: rgb(53, 161, 53);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-check:hover {
+  background-color: darkergreen;
+}
+
+.form-check.selected {
+  background-color: red;
+}
+
+.form-check-input {
+  display: block;
+  margin: 0 10px;
+}
+
+.form-check-label {
+  font-size: 18px;
+  text-align: left;
+}
+
+button.done {
+  background-color: rgb(53, 161, 53); /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  display:block; /* Ensure it takes full width */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+button.done:hover {
+  background-color: #0056b3; /* Change color on hover */
+}

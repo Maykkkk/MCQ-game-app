@@ -1,16 +1,14 @@
-// Score.js
-
 import React, { Component } from 'react';
-import '../App.css'
+import '../App.css';
 
 class Score extends Component {
 	render() {
-		const { score } = this.props;
+		const { userName, score } = this.props;
 
 		return (
 			<div>
 				<h2>Results</h2>
-				<h4>Your score: {score}</h4>
+				<h4>{userName}, your Score is: {score}</h4>
 			</div>
 		);
 	}

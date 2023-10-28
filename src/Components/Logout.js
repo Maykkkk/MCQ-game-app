@@ -1,14 +1,14 @@
 // Logout.js
 import React from 'react';
 import { useAuth } from '../AuthContext';
+import './Login.css';
 
 function Logout() {
   const { user, logout } = useAuth();
 
   return (
-    <div>
-      {user && <p>Welcome, {user}</p>}
-      {user && <button onClick={logout}>Logout</button>}
+    <div className='login-container'>
+      {user && <button onClick={logout} className="login-button">Logout</button>}
     </div>
   );
 }
