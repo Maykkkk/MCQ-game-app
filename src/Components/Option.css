@@ -5,7 +5,7 @@
     margin-top: 10px;
   }
   
-  .options .form-check {
+  .form-check {
     cursor: pointer;
     background-color: green;
     color: white;
@@ -14,20 +14,20 @@
     margin-bottom: 10px;
   }
   
-  .options .form-check:hover {
+  .form-check:hover {
     background-color: darkergreen;
   }
   
-  .options .form-check.selected {
+  .form-check.selected {
     background-color: red;
   }
   
-  .options .form-check-input {
+  .form-check-input {
     display: block;
     margin: 0 10px;
   }
   
-  .options .form-check-label {
+  .form-check-label {
     font-size: 50px;
   }
   

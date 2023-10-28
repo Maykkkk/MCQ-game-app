@@ -8,7 +8,7 @@ class Question extends Component {
 
     return (
       <div className="">
-        <h3 className="question-number">{question.id}/5</h3>
+        <h3 className="question-number">{question.id}/10</h3>
         <h3>{question.question}</h3>
         <form onSubmit={onSubmit} className="mt-2 mb-2">
           <Options
