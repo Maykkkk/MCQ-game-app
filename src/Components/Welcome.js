@@ -12,5 +12,5 @@ function Welcome({ user }) {
     </div>
   );
 }
-
+}
 export default Welcome;
