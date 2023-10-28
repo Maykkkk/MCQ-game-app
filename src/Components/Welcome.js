@@ -1,5 +1,8 @@
+
 import React from 'react';
 import './Welcome.css';
+
+function Welcome() {
 
 function Welcome({ user }) {
   return (
