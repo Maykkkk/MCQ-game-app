@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useAuth } from '../AuthContext';
 
 function Welcome() {
-  const { login } = useAuth();
-  const [name] = useState('');
 
   return (
     <div>
