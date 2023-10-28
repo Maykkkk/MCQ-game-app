@@ -19,7 +19,7 @@ function App() {
     quizStarted: false,
   });
 
-  useEffect(() => {
+    useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch(
@@ -51,10 +51,13 @@ function App() {
         setState({ ...state, loading: false });
       }
     }
-
-    fetchData();
-  }, [state]); // Empty dependency array to fetch data only once
-
+  
+    if (!state.questionBank.length) {
+      // Fetch data only when questionBank is empty
+      fetchData();
+    }
+  }, []);
+  
   const handleOptionChange = (e) => {
     setState({ ...state, selectedOption: e.target.value });
   };
