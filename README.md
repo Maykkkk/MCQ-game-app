@@ -7,7 +7,7 @@ Welcome to the Quiz Game Web App! This web application allows users to participa
 
 ![App Screenshot](https://raw.githubusercontent.com/Maykkkk/MCQ-game-app/main/public/Screenshot%20from%202023-10-28%2017-23-17.png)
 
-
+![App Screenshot](https://github.com/Maykkkk/MCQ-game-app/blob/2819f7d23152b70badbba692f496f0e1db90888a/public/Screenshot%20from%202023-10-28%2017-23-17.png)
 
 ## Table of Contents
 
