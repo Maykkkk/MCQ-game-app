@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Options from "./Option";
-import questionStyles from './Question.css';
+//import questionStyles from './Question.css';
 
 class Question extends Component {
   render() {

@@ -3,13 +3,7 @@ import { useAuth } from '../AuthContext';
 
 function Welcome() {
   const { login } = useAuth();
-  const [name, setName] = useState('');
-
-  const handleLogin = () => {
-    if (name.trim() !== '') {
-      login(name);
-    }
-  };
+  const [name] = useState('');
 
   return (
     <div>

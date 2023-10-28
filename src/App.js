@@ -1,14 +1,13 @@
 // App.js
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AuthProvider, useAuth } from './AuthContext'; // Import the AuthProvider
+import { useAuth } from './AuthContext'; // Import the AuthProvider
 import "./App.css";
 import Login from "./Components/Login";
 import Logout from "./Components/Logout";
 import Welcome from "./Components/Welcome"; // Import the Welcome component
 import Question from "./Components/Question";
 import Score from "./Components/Score";
-//import Options from "./Components/Option";
 
 function App() {
   const [state, setState] = useState({
@@ -54,7 +53,7 @@ function App() {
     }
 
     fetchData();
-  }, []); // Empty dependency array to fetch data only once
+  }, [state]); // Empty dependency array to fetch data only once
 
   const handleOptionChange = (e) => {
     setState({ ...state, selectedOption: e.target.value });
@@ -67,7 +66,7 @@ function App() {
   };
 
   const checkAnswer = () => {
-    const { questionBank, currentQuestion, selectedOption, score } = state;
+    const { questionBank, currentQuestion, selectedOption } = state;
     if (selectedOption === questionBank[currentQuestion].answer) {
       setState((prevState) => ({ ...prevState, score: prevState.score + 1 }));
     }
@@ -90,7 +89,6 @@ function App() {
     setState({ ...state, quizStarted: true }); // Update quizStarted to true
   };
 
-  const { questionBank, currentQuestion, selectedOption, score, quizEnd } = state;
   const { user } = useAuth(); // Get the user state from the AuthProvider
 
   return (
@@ -111,19 +109,19 @@ function App() {
   
       {user && state.quizStarted ? (
         // If the quiz has started, show the Quiz components
-        questionBank.length > 0 ? (
-          !quizEnd ? (
+        state.questionBank.length > 0 ? (
+          !state.quizEnd ? (
             // During the quiz, show the Question component
             <Question
-              question={questionBank[currentQuestion]}
-              selectedOption={selectedOption}
+              question={state.questionBank[state.currentQuestion]}
+              selectedOption={state.selectedOption}
               onOptionChange={handleOptionChange}
               onSubmit={handleFormSubmit}
             />
           ) : (
             // After the quiz ends, show the Score component
             <Score
-              score={score}
+              score={state.score}
               onNextQuestion={handleNextQuestion}
               className="score"
             />
@@ -140,6 +138,6 @@ function App() {
       )}
     </div>
   );
-  
-      }
-export default App
+}
+
+export default App;

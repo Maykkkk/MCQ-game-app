@@ -5,7 +5,7 @@ import '../App.css'
 
 class Score extends Component {
 	render() {
-		const { score, onNextQuestion } = this.props;
+		const { score } = this.props;
 
 		return (
 			<div>
