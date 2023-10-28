@@ -37,18 +37,18 @@ function App() {
               ],
               answer: questionData.correct_answer,
             }));
-            setState({ ...state, questionBank, loading: false });
+            setState((prevState) => ({ ...prevState, questionBank, loading: false }));
           } else {
             console.error("No questions found in API response");
-            setState({ ...state, loading: false });
+            setState((prevState) => ({ ...prevState, loading: false }));
           }
         } else {
           console.error("Failed to fetch questions");
-          setState({ ...state, loading: false });
+          setState((prevState) => ({ ...prevState, loading: false }));
         }
       } catch (error) {
         console.error("Error fetching questions:", error);
-        setState({ ...state, loading: false });
+        setState((prevState) => ({ ...prevState, loading: false }));
       }
     }
   
@@ -56,8 +56,8 @@ function App() {
       // Fetch data only when questionBank is empty
       fetchData();
     }
-  }, []); // Empty dependency array to fetch data only once
-   // Empty dependency array to fetch data only once
+  }, [state]);
+  
 
   const handleOptionChange = (e) => {
     setState({ ...state, selectedOption: e.target.value });
