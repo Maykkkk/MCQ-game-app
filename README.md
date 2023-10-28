@@ -5,6 +5,8 @@ Certainly! Here's a sample README.md for your GitHub repository:
 
 Welcome to the Quiz Game Web App! This web application allows users to participate in a quiz, answer questions, and test their knowledge. It features a clean and user-friendly interface and is built with React.
 
+![App Screenshot]([https://raw.githubusercontent.com/yourusername/yourrepository/main/app-screenshot.png](https://github.com/Maykkkk/MCQ-game-app/blob/main/public/Screenshot%20from%202023-10-28%2017-23-17.png])
+
 ## Table of Contents
 
 - [Features](#features)
