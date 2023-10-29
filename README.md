@@ -30,7 +30,7 @@ Welcome to the Quiz Game Web App! This web application allows users to participa
 
 ## Demo
 
-Check out the live demo of the Quiz Game Web App [here](#). (You can provide the link to your hosted web app).
+Check out the live demo of the Quiz Game Web App [here](https://gleaming-rabanadas-ee9048.netlify.app/). (You can provide the link to your hosted web app).
 
 ## Getting Started
 
