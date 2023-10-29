@@ -1,5 +1,3 @@
-Certainly! Here's a sample README.md for your GitHub repository:
-
 ```markdown
 # Quiz Game Web App
 
