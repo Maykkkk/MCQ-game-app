@@ -1,66 +1,68 @@
-```markdown
-# Quiz Game Web App
+# MCQ Quiz Game Web App
 
-Welcome to the Quiz Game Web App! This web application allows users to participate in a quiz, answer questions, and test their knowledge. It features a clean and user-friendly interface and is built with React.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ![App Screenshot](https://raw.githubusercontent.com/Maykkkk/MCQ-game-app/main/public/Screenshot%20from%202023-10-28%2017-23-17.png)
 
-![image](https://github.com/Maykkkk/MCQ-game-app/assets/91688667/904afa82-0086-4c4d-aa8c-4b7138762a56)
+## Table of Contents
 
-## Table of Contents!
-
-
+- [Description](#description)
 - [Features](#features)
 - [Demo](#demo)
-- [Getting Started](#getting-started)
-
+- [Installation](#installation)
 - [Usage](#usage)
-- [Customization](#customization)
+- [API Integration](#api-integration)
+- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Description
+
+The MCQ Quiz Game Web App is a web application built with React, allowing users to test their knowledge by answering a set of Multiple-Choice Questions (MCQs). The app features user authentication, a responsive design, and a user-friendly interface. Users can log in, start the quiz, answer questions, and view their scores.
+
 ## Features
 
-- User-friendly login and authentication system.
-- Interactive quiz questions with multiple-choice options.
-- Real-time scoring and feedback.
-- Responsive design for various screen sizes.
-- Customizable styles for an appealing user interface.
-- Easily extensible and adaptable for your own quizzes.
+- User authentication: Users can log in and start the quiz.
+- Responsive design: The app adapts to different screen sizes through media queries.
+- Quiz functionality: Users can answer a series of quiz questions.
+- Scoring: The app keeps track of the user's score and displays it at the end.
+- API Integration: Questions are fetched from the Open Trivia Database via its API endpoint.
 
 ## Demo
 
-Check out the live demo of the Quiz Game Web App [here](https://gleaming-rabanadas-ee9048.netlify.app/). (You can provide the link to your hosted web app).
+[Live Demo](https://gleaming-rabanadas-ee9048.netlify.app/)
 
-## Getting Started
+## Installation
 
-To get started with the Quiz Game Web App, follow these steps:
+1. Clone the repository:
 
-1. Clone the repository to your local machine:
-
-   ```sh
-   git clone https://github.com/yourusername/quiz-game-app.git
+   ```shell
+   git clone https://github.com/your-username/MCQ-Quiz-Game.git
    ```
 
 2. Navigate to the project directory:
 
-   ```sh
-   cd quiz-game-app
+   ```shell
+   cd MCQ-Quiz-Game
    ```
 
-3. Install the required dependencies:
+3. Install the required dependencies. This project uses `npm` as the package manager, so ensure you have Node.js and npm installed on your system. Then, run:
 
-   ```sh
+   ```shell
    npm install
    ```
 
-4. Start the development server:
+4. Start the app:
 
-   ```sh
+   ```shell
    npm start
    ```
 
-5. Open your web browser and access the app at `http://localhost:3000`.
+5. Open a web browser and navigate to `http://localhost:3000`.
+   
+   ![image](https://github.com/Maykkkk/MCQ-game-app/assets/91688667/904afa82-0086-4c4d-aa8c-4b7138762a56)
+   
+7. Create an account, log in, and start the quiz. Enjoy testing your knowledge!
 
 ## Usage
 
@@ -103,9 +105,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
-Remember to replace the placeholder URLs and paths with the actual URLs for your project. You can host your live demo using platforms like GitHub Pages or Netlify. Additionally, you should provide a meaningful description and details for your GitHub repository to help users understand and use your application.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
